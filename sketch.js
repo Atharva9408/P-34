@@ -12,11 +12,11 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(3000, 800);
+  createCanvas(1600, 755);
   engine = Engine.create();
   world = engine.world;
 
-  ground = new Ground(600, 600, 1600, 20);
+  ground = new Ground(width/2, height-155, width, 50);
 
   hero = new Hero(400,800,250);
   rope = new Rope(hero.body, { x: 500, y: 50 });
@@ -41,17 +41,8 @@ function setup() {
   box13 = new Box(900, 350, 70, 70);
   box14 = new Box(705, 350, 70, 70);
   box15 = new Box(750, 350, 70, 70);
-  /*box16 = new Box(700, 100, 70, 70);
-  box17 = new Box(700, 100, 70, 70);
-  box18 = new Box(700, 100, 70, 70);
-  box19 = new Box(700, 100, 70, 70);
-  box20 = new Box(700, 100, 70, 70);
-  box21 = new Box(600, 100, 70, 70);
-  box22 = new Box(600, 100, 70, 70);
-  box23 = new Box(600, 100, 70, 70);
-  box24 = new Box(600, 100, 70, 70);
-  box25 = new Box(600, 100, 70, 70);
-  box26 = new Box(600, 100, 70, 70);*/
+
+ 
 
 }
 
@@ -74,17 +65,8 @@ function draw() {
   box13.display()
   box14.display()
   box15.display()
- /* box16.display()
-  box17.display()
-  box18.display()
-  box19.display()
-  box20.display()
-  box21.display()
-  box22.display()
-  box23.display()
-  box24.display()
-  box25.display()
-  box26.display()*/
+
+ 
 
   hero.display();
   rope.display();
@@ -94,6 +76,6 @@ function draw() {
 
 function mouseDragged() {
   Matter.Body.setPosition(hero.body, { x: mouseX, y: mouseY });
-}
-
+  
+ 
 
